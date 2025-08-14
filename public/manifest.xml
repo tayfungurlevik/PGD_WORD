@@ -73,8 +73,8 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://timely-quokka-b06989.netlify.app/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://timely-quokka-b06989.netlify.app//taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://timely-quokka-b06989.netlify.app/public/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://timely-quokka-b06989.netlify.app/public/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="PGD için yapay zeka destekli Word Eklentisi!"/>
