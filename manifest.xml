@@ -5,7 +5,7 @@
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="PGD Word Addin"/>
-  <Description DefaultValue="A template to get started."/>
+  <Description DefaultValue="PGD Word Eklentisi"/>
   <IconUrl DefaultValue="https://localhost:3000/assets/logo-filled.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/logo-filled.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
