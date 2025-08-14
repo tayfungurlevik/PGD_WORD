@@ -14,8 +14,8 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\\PGD_Word_Add-in_1_0_0_0\\PGD_Word_Add-in.exe.manifest" size="0">
-      <assemblyIdentity name="PGD_Word_Add-in.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+    <dependentAssembly dependencyType="install" codebase="Application Files\\PGD_Word_Add-in_1_0_0_0\\PGD_Word_Add-in.dll.manifest" size="0">
+      <assemblyIdentity name="PGD_Word_Add-in.dll" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
