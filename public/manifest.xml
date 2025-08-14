@@ -20,7 +20,7 @@
     <Host Name="Document"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://pgd-word-addin-5nh73xtkh-tayfun-gurleviks-projects.vercel.app/taskpane.html"/>
+    <SourceLocation DefaultValue="https://timely-quokka-b06989.netlify.app/public/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
