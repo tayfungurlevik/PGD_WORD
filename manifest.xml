@@ -72,7 +72,7 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
+        <bt:String id="GetStarted.Title" DefaultValue="PGD için yapay zeka destekli Word Eklentisi!"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="PGD AI"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="PGD Eklentisini Aç"/>
       </bt:ShortStrings>

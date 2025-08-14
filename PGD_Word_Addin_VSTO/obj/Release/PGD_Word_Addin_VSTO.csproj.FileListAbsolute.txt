@@ -1,2 +1,0 @@
-C:\Users\tgurl\Documents\GitHub\PGD Word Addin\PGD Word Addin\PGD_Word_Addin_VSTO\obj\Release\PGD_Word_Addin_VSTO.csproj.AssemblyReference.cache
-C:\Users\tgurl\Documents\GitHub\PGD Word Addin\PGD Word Addin\PGD_Word_Addin_VSTO\obj\Release\PGD_Word_Addin_VSTO.csproj.CoreCompileInputs.cache
