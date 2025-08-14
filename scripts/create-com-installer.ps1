@@ -1,5 +1,5 @@
 param(
-    [string]$publishUrl = "https://tayfungurlevik.github.io/PGD_WORD/",
+    [string]$publishUrl = "https://tayfungurlevik.github.io/PGD_WORD",
     [string]$certificateFileName = "PGD_Word_Addin.pfx",
     [SecureString]$certificatePassword = (ConvertTo-SecureString -String "1234" -Force -AsPlainText)
 )
@@ -37,8 +37,16 @@ $appManifestXml = @"
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="$publishUrl/$projectName.application" />
+    <deploymentProvider codebase="$publishUrl/$($projectName).application" />
   </deployment>
+  <entryPoint>
+    <co.v1:customHostSpecified />
+  </entryPoint>
+  <dependency>
+    <dependentAssembly>
+      <assemblyIdentity type="win32" name="Microsoft.Office.Interop.Word" version="15.0.0.0" processorArchitecture="msil" publicKeyToken="71e9bce111e9429c" />
+    </dependentAssembly>
+  </dependency>
 </asmv1:assembly>
 "@
 
@@ -46,22 +54,22 @@ $appManifestXml = @"
 $deploymentManifestXml = @"
 <?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <assemblyIdentity name="$projectName.application" version="$version" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <assemblyIdentity name="$projectName.application" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="$manufacturer" asmv2:product="$productName" xmlns="urn:schemas-microsoft-com:asm.v1" />
-  <deployment install="true" mapFileExtensions="true">
+  <deployment install="true" mapFileExtensions="true" minimumRequiredVersion="$version">
     <subscription>
       <update>
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="$publishUrl/$projectName.application" />
+    <deploymentProvider codebase="$publishUrl/$($projectName).application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\\$($projectName)_$($version.Replace('.', '_'))\\$projectName.dll.manifest" size="0">
-      <assemblyIdentity name="$projectName.dll" version="$version" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+    <dependentAssembly dependencyType="install" codebase="Application Files\\$($projectName)_1_0_0_0\\$projectName.exe.manifest" size="0">
+      <assemblyIdentity name="$projectName.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
@@ -75,7 +83,7 @@ $deploymentManifestXml = @"
 "@
 
 # Create publish directory structure
-$versionFolder = $version.Replace(".", "_")
+$versionFolder = "1_0_0_0"
 $appFilesDir = Join-Path $publishDir "Application Files\$($projectName)_$versionFolder"
 New-Item -ItemType Directory -Path $appFilesDir -Force | Out-Null
 

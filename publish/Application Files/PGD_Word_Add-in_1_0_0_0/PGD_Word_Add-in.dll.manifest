@@ -8,6 +8,14 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="https://tayfungurlevik.github.io/PGD_WORD//PGD_Word_Add-in.application" />
+    <deploymentProvider codebase="https://tayfungurlevik.github.io/PGD_WORD/PGD_Word_Add-in.application" />
   </deployment>
+  <entryPoint>
+    <co.v1:customHostSpecified />
+  </entryPoint>
+  <dependency>
+    <dependentAssembly>
+      <assemblyIdentity type="win32" name="Microsoft.Office.Interop.Word" version="15.0.0.0" processorArchitecture="msil" publicKeyToken="71e9bce111e9429c" />
+    </dependentAssembly>
+  </dependency>
 </asmv1:assembly>
